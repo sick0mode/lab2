@@ -8,6 +8,7 @@ b = float(input("Введите второе число: "))
 print("Сумма:", add(a, b))
 print("Разность:", subtract(a, b))
 print("Произведение:", multiply(a, b))
+print("Возведение в степень:", power(a, b))
 
 result = divide(a, b)
 
