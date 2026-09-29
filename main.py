@@ -1,4 +1,4 @@
-from calculator import add, subtract, multiply, divide, is_even
+from calculator import add, subtract, multiply, divide, is_even, sqrt, power
 
 print("Мини-калькулятор")
 
@@ -9,6 +9,7 @@ print("Сумма:", add(a, b))
 print("Разность:", subtract(a, b))
 print("Произведение:", multiply(a, b))
 print("Возведение в степень:", power(a, b))
+
 
 result = divide(a, b)
 
@@ -23,3 +24,10 @@ if is_even(number):
     print("Число четное")
 else:
     print("Число нечетное")
+
+number2 = int(input("Введите число для возведения в корень: "))
+
+if number2 > 0:
+    print(sqrt(number2))
+else:
+    print("Число меньше 0")

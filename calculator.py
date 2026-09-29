@@ -21,3 +21,8 @@ def is_even(number):
 
 def power(a, b):
     return a ** b
+
+def sqrt(number):
+    if number < 0:
+        return None
+    return number ** 0.5
