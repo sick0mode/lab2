@@ -1,0 +1,30 @@
+name: Python Tests
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Получение исходного кода
+        uses: actions/checkout@v4
+
+      - name: Установка Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Установка pytest
+        run: python -m pip install pytest
+
+      - name: Запуск тестов
+        run: python -m pytest
